@@ -1,0 +1,48 @@
+apiVersion: batch/v1beta1
+kind: CronJob
+metadata:
+  name: {{ include "postfixadmin-fetchmail.fullname" . }}
+spec:
+  schedule: {{ .Values.schedule | default "*/10 * * * *" | quote }}
+  jobTemplate:
+    spec:
+      template:
+        metadata:
+          {{- with .Values.podAnnotations }}
+          annotations:
+            {{- toYaml . | nindent 10 }}
+          {{- end }}
+          labels:
+            {{- include "postfixadmin-fetchmail.selectorLabels" . | nindent 12 }}
+        spec:
+          containers:
+            - name: {{ .Chart.Name }}
+              envFrom:
+              - secretRef:
+                  name: {{ include "postfixadmin-fetchmail.fullname" . }}
+              image: "{{ .Values.image.repository }}:{{ .Values.image.tag | default .Chart.AppVersion }}"
+              imagePullPolicy: {{ .Values.image.pullPolicy }}
+              {{- with .Values.imagePullSecrets }}
+              imagePullSecrets:
+                {{- toYaml . | nindent 8 }}
+              {{- end }}
+              resources:
+                {{- toYaml .Values.resources | nindent 16 }}
+              securityContext:
+                {{- toYaml .Values.securityContext | nindent 16 }}
+          {{- with .Values.affinity }}
+          affinity:
+            {{- toYaml . | nindent 12 }}
+          {{- end }}
+          {{- with .Values.nodeSelector }}
+          nodeSelector:
+            {{- toYaml . | nindent 12 }}
+          {{- end }}
+          restartPolicy: OnFailure
+          securityContext:
+            {{- toYaml .Values.podSecurityContext | nindent 12 }}
+          serviceAccountName: {{ include "postfixadmin-fetchmail.fullname" . }}
+          {{- with .Values.tolerations }}
+          tolerations:
+            {{- toYaml . | nindent 12 }}
+          {{- end }}

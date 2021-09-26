@@ -1,0 +1,20 @@
+apiVersion: v2
+name: postfixadmin-fetchmail
+description: Helm chart for postfixadmin's fetchmail
+type: application
+version: 0.1.0
+appVersion: latest
+icon: https://a.fsdn.com/allura/p/postfixadmin/icon?1620415130
+
+keywords:
+- postfix
+- postfixadmin
+- fetchmail
+
+sources:
+- https://github.com/volker-raschek/postfixadmin-fetchmail-charts
+- https://hub.docker.com/volkerraschek/postfixadmin-fetchmail
+
+maintainers:
+- name: Markus Pesch
+  email: markus.pesch+apps@cryptic.systems
