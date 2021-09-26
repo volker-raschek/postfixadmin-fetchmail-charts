@@ -2,8 +2,8 @@ apiVersion: v2
 name: postfixadmin-fetchmail
 description: Helm chart for postfixadmin's fetchmail
 type: application
-version: 0.1.0
-appVersion: latest
+version: 0.1.1
+appVersion: 0.1.1
 icon: https://a.fsdn.com/allura/p/postfixadmin/icon?1620415130
 
 keywords:
