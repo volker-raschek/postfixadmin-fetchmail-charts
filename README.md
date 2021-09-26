@@ -1,6 +1,6 @@
 # postfixadmin-fetchmail-charts
 
-[![Build Status](https://git.cryptic.systems/api/badges/volker.raschek/postfixadmin-fetchmail-charts/status.svg)](https://git.cryptic.systems/volker.raschek/postfixadmin-fetchmail-charts)
+[![Build Status](https://drone.cryptic.systems/api/badges/volker.raschek/postfixadmin-fetchmail-charts/status.svg)](https://drone.cryptic.systems/volker.raschek/postfixadmin-fetchmail-charts)
 [![Artifact Hub](https://img.shields.io/endpoint?url=https://artifacthub.io/badge/repository/volker-raschek)](https://artifacthub.io/packages/search?repo=volker-raschek)
 
 This helm chart contains the cron job deployment of the fetchmail job
