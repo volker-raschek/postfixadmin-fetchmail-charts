@@ -2,8 +2,8 @@ apiVersion: v2
 name: postfixadmin-fetchmail
 description: Helm chart for postfixadmin's fetchmail
 type: application
-version: "0.1.1"
-appVersion: "0.1.1"
+version: "0.1.2"
+appVersion: "0.1.2"
 icon: https://a.fsdn.com/allura/p/postfixadmin/icon?1620415130
 
 keywords:
@@ -13,7 +13,7 @@ keywords:
 
 sources:
 - https://github.com/volker-raschek/postfixadmin-fetchmail-charts
-- https://hub.docker.com/volkerraschek/postfixadmin-fetchmail
+- https://hub.docker.com/r/volkerraschek/postfixadmin-fetchmail
 
 maintainers:
 - name: Markus Pesch
