@@ -30,7 +30,7 @@ podSecurityContext: {}
 
 schedule: "*/10 * * * *"
 
-config:
+config: {}
   # DATABASE_TYPE
   # Currently will be only postgres, mysql and mariadb supported. About the
   # environment variable DATABASE_TYPE can the backend type defined. The value
