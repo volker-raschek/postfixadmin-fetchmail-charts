@@ -3,7 +3,7 @@ name: postfixadmin-fetchmail
 description: Helm chart for postfixadmin's fetchmail
 type: application
 version: "0.1.2"
-appVersion: "0.2.0"
+appVersion: "0.3.0"
 icon: https://a.fsdn.com/allura/p/postfixadmin/icon?1620415130
 
 keywords:
